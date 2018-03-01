@@ -184,6 +184,39 @@ a:hover, a:active {
       <a href="https://www.instagram.com/viswabnath/"> <img src="instag.png"> </a>
   </p>
 </div>
+  
+  <!--  code to disable left click-->
+<script type="text/JavaScript">
+
+function disableselect(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<!-- Code to Disable Right Click -->
+<SCRIPT LANGUAGE="JavaScript">
+var message="Sorry, right click was disabled.";
+///////////////////////////////////
+function clickIE() {if (document.all) {alert(message);return false;}}
+function clickNS(e) {if
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {alert(message);return false;}}}
+if (document.layers)
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+// -->
+</script>
+<!-- end of Right click -->
 
 
 <script>
