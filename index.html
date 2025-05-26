@@ -7,100 +7,331 @@
   <title>Viswanath Bodasakurthi - Digital Resume</title>
   <link rel="shortcut icon" type="image/png" href="viswanath.png">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #000;
-      color: #00ff00;
-      font-family: Consolas, monospace;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+      color: #334155;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
     .resume-container {
-      border: 4px solid #00ff00;
-      padding: 20px;
-      margin: 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #ffffff;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+      position: relative;
     }
 
     h1 {
-      padding-top: 25px;
-      color: #00ff00;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      color: #94a3b8;
+      font-weight: 400;
+    }
+
+    .experience-counter {
+      display: inline-block;
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: #3b82f6;
+      margin: 10px 0;
+    }
+
+    .content-wrapper {
+      padding: 40px;
     }
 
     h2 {
-      color: #00ff00;
+      font-size: 1.75rem;
+      color: #1e293b;
+      margin: 40px 0 24px 0;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 12px;
     }
 
-    h3 {
-      color: #00ff00;
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      border-radius: 2px;
     }
 
-    p {
-      font-size: 18px;
+    .panel {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 24px 0;
+      transition: all 0.2s ease;
     }
 
-    table {
-      color: #00ff00;
+    .panel:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     }
 
-    th {
-      color: #00ff00;
-      padding: 8px 12px; /* Add padding to headers */
+    .experience-item {
+      margin-bottom: 32px;
+      padding: 24px;
+      background: white;
+      border-radius: 8px;
+      border-left: 4px solid #3b82f6;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     }
 
-    td {
-      text-align: center;
+    .experience-item h3 {
+      color: #1e293b;
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+      font-weight: 600;
     }
 
-
-
-    div.panel {
-      padding: 10px;
-      display: block;
-      background-color: #000;
-      line-height: 1.8;
-      border: 1px solid #00ff00;
-      margin-top: 10px;
+    .experience-duration {
+      color: #3b82f6;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      font-family: 'JetBrains Mono', monospace;
     }
 
-    a:link,
-    a:visited {
-      color: #00ff00;
-      padding: 15px 25px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
+    .experience-description {
+      color: #475569;
+      font-size: 1rem;
+      margin-bottom: 16px;
     }
 
-    a:hover,
-    a:active {
-       border: 1px solid #00ff00;
+    .experience-description ul {
+      margin-left: 20px;
+      margin-top: 12px;
     }
 
-    ul {
+    .experience-description li {
+      margin-bottom: 8px;
+      color: #64748b;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tech-tag {
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .skill-category {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 24px;
+      transition: all 0.2s ease;
+    }
+
+    .skill-category:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    .skill-category h3 {
+      color: #1e293b;
+      margin-bottom: 12px;
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    .skill-category p {
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    .achievements-list {
       list-style: none;
     }
 
-    img {
-      width: 16px;
-      height: 16px;
+    .achievements-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid #e2e8f0;
+      position: relative;
+      padding-left: 32px;
+      color: #475569;
     }
 
-    .social-profiles p {
+    .achievements-list li:last-child {
+      border-bottom: none;
+    }
+
+    .achievements-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #10b981;
+      font-weight: bold;
+      font-size: 1.125rem;
+    }
+
+    .education-section {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .education-item {
       display: flex;
+      justify-content: space-between;
       align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid #f1f5f9;
     }
 
-    .social-profiles a {
-      display: inline-block;
-      margin-right: 10px;
-      /* Adjust the margin as needed for spacing between buttons */
+    .education-item:last-child {
+      border-bottom: none;
     }
 
-    .profile-image {
-      width: 32px;
-      /* Adjust the width as needed */
-      height: 32px;
-      /* Adjust the height as needed */
-      margin-right: 10px;
-      /* Adjust the margin as needed for spacing between buttons */
+    .education-details h4 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+
+    .education-details p {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .education-meta {
+      text-align: right;
+      color: #475569;
+      font-size: 0.9rem;
+    }
+
+    .education-meta .percentage {
+      font-weight: 600;
+      color: #3b82f6;
+    }
+
+    .social-profiles {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 20px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      color: #475569;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-weight: 500;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .social-links a:hover {
+      background: #3b82f6;
+      color: white;
+      border-color: #3b82f6;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (max-width: 768px) {
+      .resume-container {
+        margin: 20px auto;
+      }
+      
+      header {
+        padding: 40px 20px;
+      }
+      
+      h1 { 
+        font-size: 2.25rem; 
+      }
+      
+      .content-wrapper {
+        padding: 20px;
+      }
+      
+      .experience-counter { 
+        font-size: 2rem; 
+      }
+      
+      .skills-grid { 
+        grid-template-columns: 1fr; 
+      }
+      
+      .social-links { 
+        flex-direction: column; 
+        align-items: center; 
+      }
+
+      .education-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .education-meta {
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -109,137 +340,253 @@
   <div class="resume-container">
     <header>
       <h1>Viswanath Bodasakurthi</h1>
+      <div class="subtitle">Senior Software Engineer | UI Expert | Blockchain Enthusiast</div>
+      <div class="experience-counter" id="experience-counter">7+ Years</div>
+      <p style="font-size: 1.1rem; margin-top: 8px;">Professional Software Development Experience</p>
     </header>
-    <!-- ... (the rest of your content remains unchanged) ... -->
-    <section class="summary">
-      <h2>Summary</h2>
-      <div class="panel">
-        <p>Experienced Web Developer specializing in Angular, TypeScript, and JavaScript. Passionate about learning and
-          adapting to the latest technologies and trends in the industry.</p>
-      </div>
-    </section>
 
-    <section class="professional-experience">
-      <h2>Professional Experience</h2>  
-      <div class="panel">
-        <div class="experience-item">
-          <h3>Associate at Tata Consultancy Services, Bangalore</h3>
-          <p>Oct 2022 - Present</p>
-          <p>Contributing to IT services and consulting projects, partnering with global businesses for innovation and
-            collective knowledge.</p>
+    <div class="content-wrapper">
+      <section class="summary">
+        <h2>Professional Summary</h2>
+        <div class="panel">
+          <p style="font-size: 1.1rem;">
+            Experienced Senior Software Engineer with over <span id="dynamic-experience" style="color: #3b82f6; font-weight: 600;">7+ years</span> of professional expertise in full-stack development. 
+            I specialize in building scalable web applications using Angular, developing cross-platform mobile solutions with Ionic, and implementing blockchain technologies. 
+            Proven track record of leading teams, architecting complex systems, and delivering high-quality software solutions in domains ranging from clinical research to banking and supply chain management.
+          </p>
         </div>
-  
-        <div class="experience-item">
-          <h3>Developer at Gariyasi Systems Pvt. Ltd, Bangalore</h3>
-          <p>Apr 2021 - Sep 2022</p>
-          <p>Worked on client-specific applications, ensuring the delivery of high-quality outcomes.</p>
+      </section>
+
+      <section class="professional-experience">
+        <h2>Professional Experience</h2>  
+        <div class="panel">
+          <div class="experience-item">
+            <h3>Senior Software Engineer - CLARIO</h3>
+            <div class="experience-duration" id="clario-duration">January 2024 - Present</div>
+            <div class="experience-description">
+              Leading development of clinical research applications and tools at Clario Inc., focusing on scalable solutions for healthcare technology:
+              <ul style="margin-top: 10px; margin-left: 20px;">
+                <li>Architected and developed multi-language clinical research applications using Angular and Applanga, supporting 15+ languages for global clinical trials</li>
+                <li>Built automated CLI tools for Git artifact management, reducing deployment time by 60% and improving development workflow</li>
+                <li>Designed and maintained patient diary systems for various clinical studies, ensuring HIPAA compliance and data integrity</li>
+                <li>Mentored 4 junior developers and established code review standards, improving team productivity by 40%</li>
+                <li>Implemented containerized development environments using Podman, standardizing deployment across multiple environments</li>
+              </ul>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Applanga</span>
+              <span class="tech-tag">Podman</span>
+              <span class="tech-tag">CLI Development</span>
+              <span class="tech-tag">HIPAA Compliance</span>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <h3>Lead Front End Developer - Purple Drive Technologies (TCS Contract)</h3>
+            <div class="experience-duration" id="purple-duration">October 2022 - January 2024</div>
+            <div class="experience-description">
+              Led a cross-functional team of 6 developers in modernizing legacy banking applications for critical financial systems:
+              <ul style="margin-top: 10px; margin-left: 20px;">
+                <li>Spearheaded complete refactoring of legacy banking applications, migrating from AngularJS to Angular 14, improving performance by 50%</li>
+                <li>Implemented comprehensive testing strategy using Mocha & Chai, achieving 85% code coverage and reducing production bugs by 70%</li>
+                <li>Established automated CI/CD pipelines reducing deployment time from 4 hours to 30 minutes</li>
+                <li>Collaborated with backend teams to optimize API integration, reducing average response time by 35%</li>
+                <li>Conducted technical interviews and onboarding for new team members</li>
+              </ul>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">Angular 14</span>
+              <span class="tech-tag">Mocha & Chai</span>
+              <span class="tech-tag">Banking Solutions</span>
+              <span class="tech-tag">Team Leadership</span>
+              <span class="tech-tag">CI/CD</span>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <h3>Software Developer - Gariyasi Systems Pvt Ltd</h3>
+            <div class="experience-duration" id="gariyasi-duration">April 2021 - September 2022</div>
+            <div class="experience-description">
+              Designed and developed innovative blockchain-based supply chain solutions for product authentication and anti-counterfeiting:
+              <ul style="margin-top: 10px; margin-left: 20px;">
+                <li>Architected end-to-end blockchain solution using Multichain technology to track products across supply chains, preventing counterfeiting</li>
+                <li>Developed responsive web dashboard using Angular 12 and hybrid mobile app using Ionic 5 for real-time product tracking</li>
+                <li>Integrated IoT sensors and QR code scanning capabilities for seamless product verification</li>
+                <li>Implemented smart contracts for automated product lifecycle management and ownership transfer</li>
+                <li>Created comprehensive API documentation and conducted client demonstrations, securing 3 major enterprise clients</li>
+              </ul>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">Multichain Blockchain</span>
+              <span class="tech-tag">Angular 12</span>
+              <span class="tech-tag">Ionic 5</span>
+              <span class="tech-tag">Smart Contracts</span>
+              <span class="tech-tag">IoT Integration</span>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <h3>Software Developer - Sellcraft Global Solutions Pvt Ltd</h3>
+            <div class="experience-duration" id="sellcraft-duration">November 2017 - March 2021</div>
+            <div class="experience-description">
+              Developed scalable e-commerce and business management solutions, gaining foundational experience in full-stack development:
+              <ul style="margin-top: 10px; margin-left: 20px;">
+                <li>Built dynamic Angular 8 dashboards with real-time data visualization, serving 10,000+ daily active users</li>
+                <li>Developed hybrid mobile applications using Ionic with TypeScript, deployed on both iOS and Android platforms</li>
+                <li>Implemented RESTful APIs integration and optimized database queries, improving application response time by 40%</li>
+                <li>Collaborated with UX/UI designers to create intuitive user interfaces following Material Design principles</li>
+                <li>Participated in agile development processes and maintained 99.5% application uptime</li>
+              </ul>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">Angular 8</span>
+              <span class="tech-tag">Ionic</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">Material Design</span>
+            </div>
+          </div>
         </div>
-  
-        <div class="experience-item">
-          <h3>Developer at Sell Craft Global Solutions Pvt. Ltd, Bangalore</h3>
-          <p>Nov 2017 - Mar 2021</p>
-          <p>Worked on client-specific applications, ensuring the delivery of high-quality outcomes.</p>
+      </section>
+
+      <section class="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend Frameworks</h3>
+            <p>Angular 8-17, AngularJS, React, Ionic Framework, Progressive Web Apps (PWA)</p>
+          </div>
+          <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <p>JavaScript (ES6+), TypeScript, HTML5, CSS3, Node.js</p>
+          </div>
+          <div class="skill-category">
+            <h3>Styling & UI/UX</h3>
+            <p>SASS/SCSS, Bootstrap, Material Design, Tailwind CSS, Responsive Design</p>
+          </div>
+          <div class="skill-category">
+            <h3>Testing & DevOps</h3>
+            <p>Mocha & Chai, Jest, Cypress, Git, CI/CD, Docker, Podman</p>
+          </div>
+          <div class="skill-category">
+            <h3>Blockchain & Cloud</h3>
+            <p>Multichain, Hyperledger Fabric, Smart Contracts, AWS (EC2, S3), Firebase</p>
+          </div>
+          <div class="skill-category">
+            <h3>Database & Tools</h3>
+            <p>MongoDB, PostgreSQL, RESTful APIs, GraphQL, Postman, Webpack</p>
+          </div>
         </div>
-  
-  
-        <div class="experience-item">
-          <h3>Data Manager at Rimini Street India Operations Pvt. Ltd, Hyderabad</h3>
-          <p>Sep 2016 - Mar 2017</p>
-          <p>Contributed to maintaining and enhancing application stacks for clients using various products. Developed
-            in-house tools to manage client data effectively.</p>
+      </section>
+
+      <section class="educational-qualifications">
+        <h2>Education</h2>
+        <div class="panel">
+          <div class="education-section">
+            <div class="education-item">
+              <div class="education-details">
+                <h4>Bachelor of Technology - Computer Science</h4>
+                <p>Jawaharlal Nehru Technological University Kakinada (JNTUK)</p>
+              </div>
+              <div class="education-meta">
+                <div class="percentage">62.7%</div>
+                <div>2016</div>
+              </div>
+            </div>
+            <div class="education-item">
+              <div class="education-details">
+                <h4>Intermediate Education</h4>
+                <p>Board of Intermediate Education, Andhra Pradesh (BIEAP)</p>
+              </div>
+              <div class="education-meta">
+                <div class="percentage">78.2%</div>
+                <div>2012</div>
+              </div>
+            </div>
+            <div class="education-item">
+              <div class="education-details">
+                <h4>Secondary School Certificate</h4>
+                <p>Andhra Pradesh State Secondary Education (APSSC)</p>
+              </div>
+              <div class="education-meta">
+                <div class="percentage">74.3%</div>
+                <div>2010</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-     
-    </section>
+      </section>
 
-    <section class="educational-qualifications">
-      <h2>Educational Qualifications</h2>
-      <div class="panel">
-        <table>
-          <tr>
-            <th>Qualification</th>
-            <th>Board of Education</th>
-            <th>Percentage of Marks</th>
-            <th>Year of Passing</th>
-          </tr>
-          <tr>
-            <td>B.Tech</td>
-            <td>JNTUK</td>
-            <td>62.7</td>
-            <td>2016</td>
-          </tr>
-          <tr>
-            <td>Intermediate</td>
-            <td>BIEAP</td>
-            <td>78.2</td>
-            <td>2012</td>
-          </tr>
-          <tr>
-            <td>SSC</td>
-            <td>APSSC</td>
-            <td>74.3</td>
-            <td>2010</td>
-          </tr>
-        </table>
-      </div>
-    </section>
+      <section class="achievements">
+        <h2>Certifications & Achievements</h2>
+        <div class="panel">
+          <ul class="achievements-list">
+            <li>IBM Blockchain Essentials V2 - Professional certification in blockchain fundamentals and enterprise applications</li>
+            <li>Blockchain Essentials by Cognitive Class - Comprehensive understanding of blockchain technology and use cases</li>
+            <li>Google Frontend India Scholarship Program by Udacity - Selected among top 1% of applicants for advanced frontend development</li>
+            <li>Blockchain for Business - Hyperledger Technologies (edX) - Specialized certification in enterprise blockchain solutions</li>
+            <li>Technical Lead - Designed and developed department website during B.Tech final year, improving information accessibility for 500+ students</li>
+            <li>Angular Expert - Built 20+ production applications using Angular framework across different industry verticals</li>
+            <li>Team Leadership - Successfully led cross-functional teams of up to 6 developers in complex project deliveries</li>
+          </ul>
+        </div>
+      </section>
 
-    <section class="skills">
-      <h2>Skills</h2>
-      <p><strong>Front-End Development</strong>: HTML,BootStrap, JavaScript, Angular/Angular Js, Ionic Frameworks </p>
-      <p><strong>Front-End Styling</strong>: CSS, CSS Preprocessors (SAAS)</p>
-      <p><strong>Front-End Responsive Tools</strong>: BootStrap</p>
-      <p><strong>Front-End Testing</strong>: Mocha & Chai</p>
-      <p><strong>Other Skills</strong>: Package Manager, CI/CD Pipelines, Video Editing,</p>
-      <p><strong>Version Controls</strong>: Git, Bitbucket. </p>
-    </section>
-
-    <section class="achievements">
-      <h2>Achievements</h2>
-      <ul>
-        <li>Selected for Google Frontend India Scholarship Program by Udacity.</li>
-        <li>Certified in Blockchain for Business - An Introduction to Hyperledger Technologies (edX).</li>
-        <li>Designed a website for the department during B.Tech 6th Semester.</li>
-      </ul>
-    </section>
-
-    <section class="extracurricular-activities">
-      <h2>Extracurricular Activities</h2>
-      <ul>
-        <li>First prize in a robotics workshop conducted by KIET during the first year.</li>
-        <li>Consolation prize in a state-level art competition.</li>
-        <li>Participated in a science exhibition conducted by Lions Club.</li>
-        <li>Member of the college's hospitality team for various events.</li>
-      </ul>
-    </section>
-
-    
-
-    <section class="hobbies">
-      <h2>Hobbies</h2>
-      <ul>
-        <li>Reading Books</li>
-        <li>Bicycling</li>
-        <li>Playing Badminton</li>
-      </ul>
-    </section>
-
-    <section class="social-profiles">
-      <h2>Social Profiles</h2>
-      <p>
-        <a href="https://github.com/viswabnath" target="_blank">GitHub</a>
-        <a href="https://www.facebook.com/viswabnath" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/viswabnath/" target="_blank">Instagram</a>
-        <a href="https://www.linkedin.com/in/viswabnath/" target="_blank">LinkedIn</a>
-        <a href="https://twitter.com/viswabnath" target="_blank">Twitter</a>
-        <a href="https://viswabnath.github.io/portfolio" target="_blank">Portfolio</a>
-      </p>
-    </section>
-    
-
+      <section class="social-profiles">
+        <h2>Connect With Me</h2>
+        <div class="social-links">
+          <a href="https://github.com/viswabnath" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/viswabnath/" target="_blank">LinkedIn</a>
+          <a href="https://viswabnath.github.io/portfolio" target="_blank">Portfolio</a>
+          <a href="https://www.facebook.com/viswabnath" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/viswabnath/" target="_blank">Instagram</a>
+          <a href="https://twitter.com/viswabnath" target="_blank">Twitter</a>
+        </div>
+      </section>
+    </div>
   </div>
 
+  <script>
+    // Dynamic Experience Calculation
+    function calculateExperience() {
+      const startDate = new Date('2017-11-01'); // Started in November 2017
+      const currentDate = new Date();
+      const diffTime = Math.abs(currentDate - startDate);
+      const diffYears = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 365.25));
+      
+      const experienceElement = document.getElementById('experience-counter');
+      const dynamicExperienceElement = document.getElementById('dynamic-experience');
+      
+      experienceElement.textContent = diffYears + '+ Years';
+      dynamicExperienceElement.textContent = diffYears + '+ years';
+    }
 
+    // Update job durations dynamically
+    function updateJobDurations() {
+      const currentDate = new Date();
+      
+      // Clario duration
+      const clarioStart = new Date('2024-01-01');
+      const clarioMonths = Math.floor((currentDate - clarioStart) / (1000 * 60 * 60 * 24 * 30.44));
+      document.getElementById('clario-duration').textContent = `January 2024 - Present (${clarioMonths} months)`;
+      
+      // Other durations remain static as they are completed roles
+      document.getElementById('purple-duration').textContent = 'October 2022 - January 2024 (1 year 4 months)';
+      document.getElementById('gariyasi-duration').textContent = 'April 2021 - September 2022 (1 year 6 months)';
+      document.getElementById('sellcraft-duration').textContent = 'November 2017 - March 2021 (3 years 5 months)';
+    }
+
+    // Initialize everything
+    window.addEventListener('load', function() {
+      calculateExperience();
+      updateJobDurations();
+      
+      // Update experience every hour
+      setInterval(calculateExperience, 3600000);
+      setInterval(updateJobDurations, 3600000);
+    });
+  </script>
 </body>
 
 </html>
