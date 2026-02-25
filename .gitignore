@@ -1,25 +1,8 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# Ignore everything in this directory and subdirectories
+*
 
-node_modules
-dist
-dist-ssr
-*.local
-legacy
+# Un-ignore the README.md file
+!README.md
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# (Recommended) Un-ignore the .gitignore file itself so your rules are saved in the repo
+!.gitignore
