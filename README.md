@@ -2,13 +2,12 @@
 
 # Viswanath Bodasakurthi
 
-**Founder · Frontend Engineer · AI-Augmented Developer**
+**Founder · Fullstack Engineer · AI-Native Developer**
 
-*Building immersive web experiences and shipping faster with AI*
+*Building immersive experiences and shipping faster with AI and then making sure they don't break   *
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-viswabnath.github.io-0055FF?style=flat-square&logo=vercel&logoColor=white)](https://viswabnath.github.io/portfolio)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-viswabnath-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/viswabnath/)
-[![OneMark Stories](https://img.shields.io/badge/OneMark_Stories-stories.onemark.co.in-c9a227?style=flat-square&logoColor=white)](https://stories.onemark.co.in)
 ![Profile Views](https://komarev.com/ghpvc/?username=viswabnath&style=flat-square&color=0055FF)
 
 </div>
@@ -17,11 +16,13 @@
 
 ### About
 
-Founder of **[OneMark Stories](https://stories.onemark.co.in)** — a wedding website design studio building immersive digital stories for couples across South India.
+Founder of **[OneMark](https://onemark.co.in)** — a digital agency reshaping the digital identity of brand's across globe.
 
 As a developer, I work across the full creative-to-code stack: complex animation systems, 3D WebGL scenes, and production-grade static sites. My current workflow is AI-first — I pair with Claude Code, Cursor, GPT-4o, and Gemini daily to architect, review, and ship with precision.
 
-I also work with **knowledge graph-based code intelligence** (code-review-graph MCP) for semantic search, impact radius analysis, and AI-assisted PR reviews across codebases.
+ I work AI-first. Claude Code/Antigravity/cursor/ are my primary pair programmer for architecture, code review, and     
+  agentic work across the stack. I also use code-review-graph MCP for semantic search, impact radius
+   analysis, and PR context across large codebases.  
 
 ---
 
@@ -29,7 +30,7 @@ I also work with **knowledge graph-based code intelligence** (code-review-graph 
 
 | Area | Tools |
 |---|---|
-| **AI Coding** | Claude Code (CLI + agentic), Cursor, GPT-4o, Gemini |
+| **AI Coding** | Claude Code (CLI + agentic), Cursor, GPT-4o, Gemini, Antigravity |
 | **Codebase Intelligence** | code-review-graph MCP — semantic search, impact analysis, PR review context |
 | **Agent Workflows** | Claude Agent SDK, MCP servers, prompt engineering for structured codegen |
 | **Frontend** | React, Vanilla JS (ES6+), HTML5, CSS3 / CSS Grid |
@@ -64,6 +65,6 @@ I also work with **knowledge graph-based code intelligence** (code-review-graph 
 
 <div align="center">
 
-*Founder. Engineer. AI-native. — shipping digital stories that matter.*
+*Founder. Engineer. AI-native. — shipping ideas and code that matter.*
 
 </div>
