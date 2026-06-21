@@ -1,70 +1,87 @@
-<div align="center">
+ <div align="center">
 
-# Viswanath Bodasakurthi
+  <h1>Viswanath Bodasakurthi</h1>
 
-**Founder · Fullstack Engineer · AI-Native Developer**
+  **Senior Software Engineer · Co-Founder · AI-Native Developer**
 
-*Building immersive experiences and shipping faster with AI and then making sure they don't break   *
+  *8+ years shipping production systems across clinical, blockchain, finance, and creative tech*
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-viswabnath.github.io-0055FF?style=flat-square&logo=vercel&logoColor=white)](https://viswabnath.github.io/portfolio)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-viswabnath-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/viswabnath/)
-![Profile Views](https://komarev.com/ghpvc/?username=viswabnath&style=flat-square&color=0055FF)
+  [![Portfolio](https://img.shields.io/badge/Portfolio-viswabnath.vercel.app-000?style=flat-square&logo=vercel&logoColor=white)](https://viswabnath.vercel.app)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-viswabnath-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/viswabnath)
+  [![Onemark](https://img.shields.io/badge/Agency-Onemark%20Digital-c9a96e?style=flat-square)](https://onemark.co.in)
+  ![Profile Views](https://komarev.com/ghpvc/?username=viswabnath&style=flat-square&color=c9a96e)
 
-</div>
+  </div>
 
----
+  ---
 
-### About
+  ### whoami
 
-Founder of **[OneMark](https://onemark.co.in)** — a digital agency reshaping the digital identity of brand's across globe.
+  Senior Software Engineer at **CLARIO – Channelsoft**, building clinical platforms used across 50+ countries.
+  Co-Founder of **[Onemark Digital](https://onemark.co.in)** — a creative-tech agency shipping bespoke digital experiences.
 
-As a developer, I work across the full creative-to-code stack: complex animation systems, 3D WebGL scenes, and production-grade static sites. My current workflow is AI-first — I pair with Claude Code, Cursor, GPT-4o, and Gemini daily to architect, review, and ship with precision.
+  I work AI-native. Claude Code is my primary engineering environment — I've used it to ship a full 3D architectural walkthrough with
+  zero prior 3D experience, build a macOS disk cleaner with zero prior Swift experience, and run multi-agent pipelines in
+  production. The stack changes; the philosophy doesn't: **ship things that cannot fail.**
 
- I work AI-first. Claude Code/Antigravity/cursor/ are my primary pair programmer for architecture, code review, and     
-  agentic work across the stack. I also use code-review-graph MCP for semantic search, impact radius
-   analysis, and PR context across large codebases.  
+  ---
 
----
+  ### What I Build With
 
-### What I'm Working With
+  | Area | Stack |
+  |---|---|
+  | **Frontend** | Angular (expert), React 18, Next.js 15, TypeScript |
+  | **AI & Agents** | Claude Code, Claude Agent SDK, MCP servers, CrewAI, multi-agent pipelines |
+  | **3D & Creative** | Three.js, WebGL, Blender MCP, Remotion, GSAP + ScrollTrigger |
+  | **Backend** | Node.js, FastAPI, Supabase, Firebase, WhatsApp Cloud API |
+  | **Native** | Swift, SwiftUI, AppKit (macOS) |
+  | **Codebase Intel** | code-review-graph MCP — semantic search, impact radius, PR context |
 
-| Area | Tools |
-|---|---|
-| **AI Coding** | Claude Code (CLI + agentic), Cursor, GPT-4o, Gemini, Antigravity |
-| **Codebase Intelligence** | code-review-graph MCP — semantic search, impact analysis, PR review context |
-| **Agent Workflows** | Claude Agent SDK, MCP servers, prompt engineering for structured codegen |
-| **Frontend** | React, Vanilla JS (ES6+), HTML5, CSS3 / CSS Grid |
-| **Animation & 3D** | GSAP 3 + ScrollTrigger, Three.js, IntersectionObserver |
-| **Tooling** | Vite, Firebase, Git |
+  ---
 
----
+  ### Selected Projects
 
-### GitHub Activity
+  | Project | What it is |
+  |---|---|
+  | [**FamilyWall**](https://familywall.in) | Multi-tenant family tree SaaS — subdomain isolation, Claude Haiku NL queries, WhatsApp OTP |
+  | [**Pettlu Residence**](https://pettlu-house-render.vercel.app) | Full 3D architectural walkthrough — built with Blender MCP + Claude Code, zero prior 3D experience |
+  | [**Remotion × Claude**](https://github.com/viswabnath) | AI-directed programmatic video — Claude writes the composition, Remotion renders to MP4 |
+  | [**CompresoClean**](https://github.com/viswabnath/CompresoClean) | macOS native disk cleaner — Swift/AppKit, built with Claude Code, zero prior Swift experience |
+  | [**Compreso**](https://compreso.vercel.app) | Privacy-first browser image compression — binary search quality targeting, ZIP batch export |
+  | [**GhostGrab**](https://github.com/viswabnath/GhostGrab) | Video scraper that strips all EXIF/tracking metadata via FFmpeg before download |
+  | [**Manvi OS**](https://manvi.onrender.com) | Event-driven WhatsApp AI assistant — cron scheduling, atomic dispatch guards, live dashboard |
+  | [**OneMark Stories**](https://stories.onemark.co.in) | Agency platform for bespoke digital event experiences — 200+ shipped |
 
-<div align="center">
+  ---
 
-![GitHub Stats](https://github-readme-stats-eight-theta.vercel.app/api?username=viswabnath&show_icons=true&theme=radical&show=reviews,prs_merged,prs_merged_percentage&include_all_commits=true&count_private=true)
+  ### GitHub Activity
 
-![Streak](https://github-readme-streak-stats.herokuapp.com/?user=viswabnath&theme=radical)
+  <div align="center">
 
-![Top Langs](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=viswabnath&layout=compact&theme=radical&hide=css)
+  ![GitHub Stats](https://github-readme-stats-eight-theta.vercel.app/api?username=viswabnath&show_icons=true&theme=radical&show=reviews,prs_merged,prs_merged_percentage&include_all_commits=true&count_private=true)
 
-</div>
+  ![Streak](https://github-readme-streak-stats.herokuapp.com/?user=viswabnath&theme=radical)
 
----
+  ![Top Langs](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=viswabnath&layout=compact&theme=radical&hide=css)
 
-### Trophies
+  </div>
 
-<div align="center">
+  ---
 
-![Trophies](https://github-profile-trophy.vercel.app/?username=viswabnath&theme=radical&no-frame=true&row=1&column=7)
+  <div align="center">
 
-</div>
+  ![Contribution 
+  Graph](https://github-readme-activity-graph.vercel.app/graph?username=viswabnath&theme=react-dark&hide_border=true&area=true)
 
----
+  </div>
 
-<div align="center">
 
-*Founder. Engineer. AI-native. — shipping ideas and code that matter.*
+  
 
-</div>
+  ---
+
+  <div align="center">
+
+  *Clinical · Blockchain · AI-native · Creative — 8 years, 4 industries, 50+ projects shipped live.*
+
+  </div>
